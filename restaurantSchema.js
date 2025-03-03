@@ -12,7 +12,10 @@ const RestaurantSchema = new mongoose.Schema({
     },
     itemsArr: {
         type: String,
-        itemsArr: [item]
+        itemsArr: {
+            type: Object,
+            ref: item
+        }
     }
 })
 
