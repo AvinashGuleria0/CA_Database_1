@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+const item = require('./itemschema')
 
 const RestaurantSchema = new mongoose.Schema({
     name: {
@@ -11,9 +12,7 @@ const RestaurantSchema = new mongoose.Schema({
     },
     itemsArr: {
         type: String,
-        itemsArr: [{
-            type: String
-        }]
+        itemsArr: [item]
     }
 })
 
